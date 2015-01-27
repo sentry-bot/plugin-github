@@ -17,4 +17,10 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'bundler', '~> 1.0'
   gem.add_development_dependency 'rake', '~> 0.8'
   gem.add_development_dependency 'rubygems-tasks', '~> 0.2'
+
+  gem.add_dependency "cinch"
+  gem.add_dependency "octokit"
+  gem.add_dependency "chronic"
+  gem.add_dependency "chronic_duration"
+  gem.add_dependency "twitter-text"
 end
