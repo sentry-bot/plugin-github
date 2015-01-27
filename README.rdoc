@@ -1,0 +1,27 @@
+= sentry-github
+
+* {Homepage}[https://rubygems.org/gems/sentry-github]
+* {Documentation}[http://rubydoc.info/gems/sentry-github/frames]
+* {Email}[mailto:apersson.93 at gmail.com]
+
+== Description
+
+TODO: Description
+
+== Features
+
+== Examples
+
+  require 'sentry/github'
+
+== Requirements
+
+== Install
+
+  $ gem install sentry-github
+
+== Copyright
+
+Copyright (c) 2015 Alexander Persson
+
+See LICENSE.txt for details.
