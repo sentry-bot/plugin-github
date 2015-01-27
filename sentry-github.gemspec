@@ -1,10 +1,8 @@
 # -*- encoding: utf-8 -*-
 
-require File.expand_path('../lib/sentry/github/version', __FILE__)
-
 Gem::Specification.new do |gem|
   gem.name          = "sentry-github"
-  gem.version       = Sentry::GitHub::VERSION
+  gem.version       = File.new("VERSION", 'r').read.chomp
   gem.summary       = %q{TODO: Summary}
   gem.description   = %q{TODO: Description}
   gem.license       = "MIT"
