@@ -3,8 +3,7 @@
 Gem::Specification.new do |gem|
   gem.name          = "sentry-github"
   gem.version       = File.new("VERSION", 'r').read.chomp
-  gem.summary       = %q{TODO: Summary}
-  gem.description   = %q{TODO: Description}
+  gem.summary       = %q{TODO: Fetches information about posted GitHub links}
   gem.license       = "MIT"
   gem.authors       = ["Alexander Persson"]
   gem.email         = "apersson.93@gmail.com"
