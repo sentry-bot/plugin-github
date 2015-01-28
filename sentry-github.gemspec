@@ -22,4 +22,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency "octokit"
   gem.add_dependency "actionpack"
   gem.add_dependency "twitter-text"
+  gem.add_dependency "sentry-helper"
 end
