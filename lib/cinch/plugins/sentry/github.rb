@@ -33,13 +33,13 @@ module Cinch
             when "www.github.com", "github.com"
               begin
                 if not uri.path.to_s.empty?
-                  # Run regex over the path
-                  matches = uri.path.match %r{\/([^\/]+)\/?([^\/]+)?\/?([^\/]+)\/?(\d*)?}
+                  # Split the path by forward slash
+                  split = uri.path.split "/"
 
                   # Check if we got a repository name in the link
-                  if matches[2].nil? then
+                  if split[2].nil? then
                     # Fetch the user information
-                    user = Ocotkit.user matches[1]
+                    user = Ocotkit.user split[1]
 
                     # Reply with the information
                     m.reply("[%s] %s (repos: %s)" % [
@@ -49,7 +49,7 @@ module Cinch
                     ])
                   else
                     # Fetch the repository information
-                    repo = Octokit.repo matches[1] + "/" + matches[2]
+                    repo = Octokit.repo split[1] + "/" + split[2]
 
                     # Fetch the latest commit
                     message = repo.rels[:commits].get.data.first.commit.message
