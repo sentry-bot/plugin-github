@@ -1,20 +1,31 @@
 = sentry-github
 
-* {Homepage}[https://rubygems.org/gems/sentry-github]
-* {Documentation}[http://rubydoc.info/gems/sentry-github/frames]
-* {Email}[mailto:apersson.93 at gmail.com]
-
-== Description
-
-TODO: Description
+Parses messages for GitHub links then replies with information about it.
 
 == Features
 
+* Replies with information about posted repository or user
+
 == Examples
 
-  require 'sentry/github'
+  require 'cinch'
+  require 'cinch/plugins/sentry/github'
 
-== Requirements
+  bot = Cinch::Bot.new do
+    configure do |c|
+      c.nick = "Raknet"
+      c.server = "irc.oftc.net"
+      c.channels = ["#cinchdev"]
+      c.plugins.plugins = [Cinch::Plugins::Sentry::GitHub]
+      c.plugins.options = {
+        Cinch::Plugins::Sentry::GitHub => {
+          "token" => ""
+        }
+      }
+    end
+  end
+
+  bot.start
 
 == Install
 
