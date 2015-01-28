@@ -3,6 +3,7 @@ require 'octokit'
 require 'action_view'
 require 'twitter-text'
 require 'uri'
+require "sentry/helper"
 
 module Cinch
   module Plugins
@@ -27,7 +28,7 @@ module Cinch
           # Go through all links
           urls.each do |url|
             # Parse the url
-            uri = URI.parse(url.to_s)
+            uri = URI.parse(URI.escape(url.to_url))
 
             # We only handle GitHub links
             case uri.host
