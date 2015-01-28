@@ -20,7 +20,6 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "cinch"
   gem.add_dependency "octokit"
-  gem.add_dependency "chronic"
-  gem.add_dependency "chronic_duration"
+  gem.add_dependency "actionpack"
   gem.add_dependency "twitter-text"
 end

@@ -1,6 +1,6 @@
 require 'cinch'
 require 'octokit'
-require 'chronic_duration'
+require 'action_view'
 require 'twitter-text'
 require 'uri'
 
@@ -10,6 +10,7 @@ module Cinch
       class GitHub
         include Cinch::Plugin
         include Twitter::Extractor
+        include ActionView::Helpers::DateHelper
 
         # Fetch all github links
         listen_to :channel
